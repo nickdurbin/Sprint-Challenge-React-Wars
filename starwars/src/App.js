@@ -7,6 +7,7 @@ import CharacterCard from './components/CharacterCard';
 
 const MainContent = styled.section`
   width: 100%;
+  margin: 0 auto;
 `;
 
 const Button = styled.button`
@@ -20,11 +21,10 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-
 const App = () => {
  
   const [data, setData] = useState([{}]);
-  const [page, setPage] = useState();
+  const [page, setPage] = useState('');
 
   useEffect(() => {
     axios
@@ -38,12 +38,20 @@ const App = () => {
      })
   }, [page]);
 
+  console.log(page);
+
   return (
     <>
     <Navigation />
     <MainContent className="App">
-      <Button>Prev</Button>
-      <Button>Next</Button>
+
+      <Button className="previous" onClick={() => setPage(page - 1)}>
+        Prev
+      </Button>
+      <Button className="next" onClick={() => setPage(page + 1)}>
+        Next
+      </Button>
+
       {data.map(character => {
         return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
       }
