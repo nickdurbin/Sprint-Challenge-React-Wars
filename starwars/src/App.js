@@ -4,6 +4,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import Navigation from './components/Navigation';
 import CharacterCard from './components/CharacterCard';
+import StarWarsCrawl from './components/StarWarsCrawl';
 
 const MainContent = styled.section`
   width: 100%;
@@ -44,6 +45,7 @@ const App = () => {
 
   return (
     <>
+    <StarWarsCrawl />
     <Navigation />
     <MainContent className="App">
 
