@@ -8,9 +8,9 @@ const Card = styled.div`
   align-items: center;
   margin: 10% auto;
   padding: 1rem;
-  width: 40%;
-  height: 300px;
-  background-color: tan;
+  width: 30%;
+  height: 400px;
+  background-color: white;
   font-size: 2rem;
   opacity: 0.7;
   border: 1px solid black;

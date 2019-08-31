@@ -8,6 +8,7 @@ import CharacterCard from './components/CharacterCard';
 const MainContent = styled.section`
   width: 100%;
   margin: 0 auto;
+  height: 90vh;
 `;
 
 const Button = styled.button`
@@ -19,6 +20,7 @@ const Button = styled.button`
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  opacity: 0.8;
 `;
 
 const App = () => {
@@ -56,6 +58,13 @@ const App = () => {
         return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
       }
       )}
+
+      <Button className="previous" onClick={() => setPage(page - 1)}>
+        Prev
+      </Button>
+      <Button className="next" onClick={() => setPage(page + 1)}>
+        Next
+      </Button>
       
     </MainContent>
     </>
