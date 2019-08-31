@@ -8,7 +8,7 @@ import CharacterCard from './components/CharacterCard';
 const MainContent = styled.section`
   width: 100%;
   margin: 0 auto;
-  height: 90vh;
+  height: 100vh;
 `;
 
 const Button = styled.button`
@@ -54,10 +54,10 @@ const App = () => {
         Next
       </Button>
 
-      {data.map(character => {
-        return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
-      }
-      )}
+        {data.map(character => {
+          return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
+        }
+        )}
 
       <Button className="previous" onClick={() => setPage(page - 1)}>
         Prev
