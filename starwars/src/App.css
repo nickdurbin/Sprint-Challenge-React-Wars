@@ -2,6 +2,7 @@
   text-align: center;
   background-image: url('./starwars.jpg');
   background-size: cover;
+  background-repeat: repeat;
 }
 .Header {
   color: #443e3e;
