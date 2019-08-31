@@ -1,11 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const NavBar = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0.8;
+`;
+
+const Logo = styled.h1`
+  font-size: 2.5rem;
+  font-weight: 800;
+`;
+
 function Navigation() {
   return (
-    <div>
-      <h1 className="Header">React Wars</h1>
-    </div>
+    <NavBar>
+      <Logo>React Wars</Logo>
+    </NavBar>
   )
 }
 

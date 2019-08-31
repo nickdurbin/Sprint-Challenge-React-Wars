@@ -6,8 +6,18 @@ import Navigation from './components/Navigation';
 import CharacterCard from './components/CharacterCard';
 
 const MainContent = styled.section`
-  display: flex;
   width: 100%;
+`;
+
+const Button = styled.button`
+  width: 100px;
+  height: 30px;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
 `;
 
 
@@ -18,7 +28,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-     .get(`https://swapi.co/api/people`)
+     .get(`https://swapi.co/api/people/?page=${page}`)
      .then(res => {
        setData(res.data.results);
        console.log(res.data.results);
@@ -32,7 +42,8 @@ const App = () => {
     <>
     <Navigation />
     <MainContent className="App">
-    
+      <Button>Prev</Button>
+      <Button>Next</Button>
       {data.map(character => {
         return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
       }
