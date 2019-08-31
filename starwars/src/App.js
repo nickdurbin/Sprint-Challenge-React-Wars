@@ -24,7 +24,7 @@ const Button = styled.button`
 const App = () => {
  
   const [data, setData] = useState([{}]);
-  const [page, setPage] = useState('');
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     axios

@@ -30,9 +30,9 @@ function CharacterCard(props) {
   return (
     <Card key={props.url}>
       <H1>{props.name}</H1>
-      <H3>{props.height}</H3>
-      <H3>{props.gender}</H3>
-      <H3>{props.birth_year}</H3>
+      <H3>Height: {props.height}</H3>
+      <H3>Gender: {props.gender}</H3>
+      <H3>Birth Year: {props.birth_year}</H3>
     </Card>
   )
 }
