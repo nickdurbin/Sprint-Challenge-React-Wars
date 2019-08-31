@@ -5,6 +5,11 @@ import styled from 'styled-components';
 import Navigation from './components/Navigation';
 import CharacterCard from './components/CharacterCard';
 
+const MainContent = styled.section`
+  display: flex;
+  width: 100%;
+`;
+
 
 const App = () => {
  
@@ -24,13 +29,17 @@ const App = () => {
   }, [page]);
 
   return (
-    <div className="App">
-      <Navigation />
+    <>
+    <Navigation />
+    <MainContent className="App">
+    
       {data.map(character => {
-        return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year}/>
-      })}
+        return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
+      }
+      )}
       
-    </div>
+    </MainContent>
+    </>
   );
 }
 
