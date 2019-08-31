@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+  React is a frontend library for Javascript, which is often times referred to a framework. It aims to solve the issue with large applications and rendering those applications over and over with the DOM. It uses a virtual DOM and only updates the components it needs to.
+
 - [ ] What does it mean to _think_ in react?
+
+  Not entirely sure, but my guess would be to think in components. Make everything reusable, dry, and able to be scaled for fast updating of DOM. 
 
 - [ ] Describe state.
 
+  State is exactly that - the state of a particular component on a webpage or in an application. We store state with hooks in this iteration of the curriculum and manipulate the state according to user interaction.
+
 - [ ] Describe props.
 
+  Props are like everything in Javascript an object. It is information stored in an object and able to be passed down in a unilateral direction to give components access to the data/ properties of another component.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+  Side effects are effects that are caused by things like API's when we are receiving information we are unsure as to what may be returned. This can cause issues for programs and we store that information in a hook we now call useEffect. It handles those effects and syncs them according to the current state of various components or data. 
 
 ## Project Set Up
 
@@ -88,7 +98,3 @@ It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wik
   - `console.log()` the data coming back from the server.
   - Notice that there are `next` and `previous` fields that give you a URL.
   - You can build a function that will get characters called `getCharacters` that you can use dynamically to get the next or previous set of characters. You would need to supply it with the proper fields, and you'll need to set up more state to do this.
-
-<!--
-- [ ] Build another app from scratch that looks very similar to this one. Inside of your main `App` component fetch some data in this same fashion from this url `https://dog.ceo/dog-api/#all` you'll have to follow the documentation at that website and figure out how to change up the code you've seen here in this Star Wars app in order to properly fetch the data and store it on Component State.
--->

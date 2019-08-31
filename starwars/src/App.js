@@ -4,10 +4,12 @@ import axios from 'axios';
 import styled from 'styled-components';
 import Navigation from './components/Navigation';
 import CharacterCard from './components/CharacterCard';
+import StarWarsCrawl from './components/StarWarsCrawl';
 
 const MainContent = styled.section`
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
 `;
 
 const Button = styled.button`
@@ -19,6 +21,7 @@ const Button = styled.button`
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  opacity: 0.8;
 `;
 
 const App = () => {
@@ -42,6 +45,7 @@ const App = () => {
 
   return (
     <>
+    <StarWarsCrawl />
     <Navigation />
     <MainContent className="App">
 
@@ -52,10 +56,17 @@ const App = () => {
         Next
       </Button>
 
-      {data.map(character => {
-        return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
-      }
-      )}
+        {data.map(character => {
+          return <CharacterCard name={character.name} height={character.height} gender={character.gender} birth_year={character.birth_year} url={character.url}/>
+        }
+        )}
+
+      <Button className="previous" onClick={() => setPage(page - 1)}>
+        Prev
+      </Button>
+      <Button className="next" onClick={() => setPage(page + 1)}>
+        Next
+      </Button>
       
     </MainContent>
     </>
